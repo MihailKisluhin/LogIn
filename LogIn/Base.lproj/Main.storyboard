@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LogIn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="LogIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                     <constraint firstAttribute="width" constant="200" id="rGE-Bh-ndq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZqU-ik-TeA">
                                 <rect key="frame" x="96.666666666666686" y="243" width="200" height="34"/>
@@ -30,7 +30,7 @@
                                     <constraint firstAttribute="width" constant="200" id="A7q-MX-C5b"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ux-oG-ghA">
                                 <rect key="frame" x="146.66666666666666" y="297" width="100" height="34.333333333333314"/>
@@ -72,6 +72,13 @@
                             <constraint firstItem="ZFM-K8-ljq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="x9K-un-xz4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="forgotNameButton" destination="VXj-J8-qtG" id="wnU-GA-FUW"/>
+                        <outlet property="logInButton" destination="6ux-oG-ghA" id="4tg-Td-gqd"/>
+                        <outlet property="loginView" destination="8bC-Xf-vdC" id="QuA-xD-cSa"/>
+                        <outlet property="passwordTF" destination="ZqU-ik-TeA" id="PVz-LU-w6k"/>
+                        <outlet property="userNameTF" destination="JTR-uO-xmo" id="qf8-GS-Syq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
