@@ -20,12 +20,27 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    @IBAction func ShowUserAlert() {
+        showAlert(with: "Oops!", andMessage: "Your name is Anton")
+    }
+    
+    @IBAction func showPassAlert() {
+        showAlert(with: "Oops!", andMessage: "Are you dolboeb?")
+    }
+    
+    
 }
 
     extension LoginViewController {
         private func showAlert(with title: String, andMessage message: String) {
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
             present(alert, animated: true)
+            let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+                self.userNameTF.text = ""
+                self.passwordTF.text = ""
+            }
+            alert.addAction(okAction)
         }
     }
 
